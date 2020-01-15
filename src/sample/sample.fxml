@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <TextArea fx:id="mainArea" editable="false" VBox.vgrow="ALWAYS">
+      <font>
+         <Font size="14.0" />
+      </font></TextArea>
+    <HBox>
+        <TextField fx:id="msgField" onAction="#sendMessageAction" promptText="Введите сообщение..." HBox.hgrow="ALWAYS" onKeyReleased="#btnChange">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+        </TextField>
+        <Button fx:id="btnSend" onAction="#sendMessageAction" text="Send" HBox.hgrow="ALWAYS" disable="true"/>
+    </HBox>
+</VBox>
